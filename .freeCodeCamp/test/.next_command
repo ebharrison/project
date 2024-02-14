@@ -75,3 +75,4 @@ git push origin master
 ls --color=auto
 code rebuildDatabase.sh
 chmod +x rebuildDatabase.sh
+./rebuildDatabase.sh
