@@ -149,6 +149,10 @@ INSERT INTO public.characters VALUES (5, 'Bowser', 'Koopa Kingdom', 'Yellow');
 
 INSERT INTO public.more_info VALUES (2, '1981-07-09', 155, 64.5, 1);
 INSERT INTO public.more_info VALUES (3, '1983-07-14', 175, 48.8, 2);
+INSERT INTO public.more_info VALUES (4, '1985-10-18', 173, 52.2, 3);
+INSERT INTO public.more_info VALUES (5, '1950-01-10', 66, 35.6, 4);
+INSERT INTO public.more_info VALUES (6, '1990-10-29', 258, 300.0, 5);
+INSERT INTO public.more_info VALUES (7, '1989-07-31', NULL, NULL, 6);
 
 
 --
@@ -162,7 +166,7 @@ SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
 -- Name: more_info_more_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 3, true);
+SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 7, true);
 
 
 --
