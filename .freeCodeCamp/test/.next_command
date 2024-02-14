@@ -81,3 +81,4 @@ ls --color=auto
 ./rebuildDatabase.sh
 ls --color=auto
 ./rebuildDatabase.sh
+./dumpDatabase.sh
