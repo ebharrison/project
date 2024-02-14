@@ -1,4 +1,4 @@
-pg_dump -cC --inserts -U freecodecamp first_database > first_database.sql
+pg_dump -cC --inserts -U freecodecamp mario_database > mario_database.sql
 git add .
 git commit -m "saving dump of database..."
 git push origin master
