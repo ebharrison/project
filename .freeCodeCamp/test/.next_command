@@ -65,3 +65,7 @@ ls --color=auto
 git remote -v
 ls --color=auto -al
 rm -rf .git
+git status
+git remote add
+git remote add coderoad https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database
+./dumpDatabase.sh
