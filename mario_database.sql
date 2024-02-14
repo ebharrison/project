@@ -80,10 +80,53 @@ ALTER SEQUENCE public.characters_character_id_seq OWNED BY public.characters.cha
 
 
 --
+-- Name: more_info; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.more_info (
+    more_info_id integer NOT NULL,
+    birthday date,
+    height integer,
+    weight numeric(4,1)
+);
+
+
+ALTER TABLE public.more_info OWNER TO freecodecamp;
+
+--
+-- Name: more_info_more_info_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.more_info_more_info_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.more_info_more_info_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: more_info_more_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.more_info_more_info_id_seq OWNED BY public.more_info.more_info_id;
+
+
+--
 -- Name: characters character_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.characters ALTER COLUMN character_id SET DEFAULT nextval('public.characters_character_id_seq'::regclass);
+
+
+--
+-- Name: more_info more_info_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.more_info ALTER COLUMN more_info_id SET DEFAULT nextval('public.more_info_more_info_id_seq'::regclass);
 
 
 --
@@ -100,10 +143,23 @@ INSERT INTO public.characters VALUES (5, 'Bowser', 'Koopa Kingdom', 'Yellow');
 
 
 --
+-- Data for Name: more_info; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+
+
+--
 -- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
 SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
+
+
+--
+-- Name: more_info_more_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 1, false);
 
 
 --
@@ -112,6 +168,14 @@ SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
 
 ALTER TABLE ONLY public.characters
     ADD CONSTRAINT characters_pkey PRIMARY KEY (character_id);
+
+
+--
+-- Name: more_info more_info_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.more_info
+    ADD CONSTRAINT more_info_pkey PRIMARY KEY (more_info_id);
 
 
 --
