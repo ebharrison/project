@@ -72,3 +72,6 @@ git remote add coderoad https://github.com/freeCodeCamp/learn-relational-databas
 git status
 git push origin master
 ./dumpDatabase.sh
+ls --color=auto
+code rebuildDatabase.sh
+chmod +x rebuildDatabase.sh
