@@ -76,3 +76,4 @@ ls --color=auto
 code rebuildDatabase.sh
 chmod +x rebuildDatabase.sh
 ./rebuildDatabase.sh
+./dumpDatabase.sh
