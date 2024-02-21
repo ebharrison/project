@@ -143,3 +143,5 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 ./dumpDatabase.sh
 ./dumpDatabase.sh
 ./dumpDatabase.sh
+./rebuildDatabase.sh
+./dumpDatabase.sh
